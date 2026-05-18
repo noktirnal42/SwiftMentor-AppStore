@@ -3,8 +3,8 @@
   --ink: #f7f9fc;
   --muted: #a8b3c7;
   --soft: #dce6f6;
-  --line: rgba(255, 255, 255, 0.14);
-  --panel: rgba(13, 18, 30, 0.86);
+  --line: rgba(255, 255, 255, 0.12);
+  --panel: rgba(13, 18, 30, 0.9);
   --panel-solid: #111827;
   --page: #070b12;
   --blue: #47a7ff;
@@ -27,8 +27,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
   color: var(--ink);
   background:
-    linear-gradient(180deg, rgba(7, 11, 18, 0.68), #070b12 680px),
-    linear-gradient(115deg, #08111f 0%, #0c1422 48%, #160f18 100%);
+    radial-gradient(circle at 78% 8%, rgba(10, 132, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 16% 18%, rgba(255, 157, 66, 0.1), transparent 28%),
+    linear-gradient(115deg, #070b12 0%, #09111d 54%, #0d1018 100%);
   line-height: 1.55;
 }
 
@@ -41,17 +42,17 @@ a {
   top: 0;
   z-index: 20;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(7, 11, 18, 0.76);
+  background: rgba(7, 11, 18, 0.88);
   backdrop-filter: blur(18px);
 }
 
 .nav {
-  width: min(1180px, calc(100% - 36px));
+  width: min(1060px, calc(100% - 36px));
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 70px;
+  min-height: 62px;
   gap: 24px;
 }
 
@@ -65,17 +66,17 @@ a {
 }
 
 .brand img {
-  width: 38px;
-  height: 38px;
-  border-radius: 9px;
-  box-shadow: 0 12px 32px rgba(10, 132, 255, 0.22);
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  box-shadow: 0 10px 26px rgba(10, 132, 255, 0.18);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
 }
 
 .nav-links a {
@@ -89,21 +90,11 @@ a {
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 70px);
+  min-height: 540px;
   display: grid;
-  align-items: end;
+  align-items: center;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
-}
-
-.hero-video-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.46;
-  filter: saturate(0.92) contrast(1.05);
 }
 
 .hero::before {
@@ -111,22 +102,29 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(7, 11, 18, 0.96) 0%, rgba(7, 11, 18, 0.74) 42%, rgba(7, 11, 18, 0.24) 100%),
-    linear-gradient(180deg, rgba(7, 11, 18, 0.18) 0%, rgba(7, 11, 18, 0.92) 100%);
+    linear-gradient(180deg, rgba(7, 11, 18, 0.08) 0%, rgba(7, 11, 18, 0.86) 100%);
 }
 
 .hero-inner,
 .section-inner,
 .legal-main {
-  width: min(1180px, calc(100% - 36px));
+  width: min(1060px, calc(100% - 36px));
   margin: 0 auto;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(320px, 0.72fr);
+  gap: 36px;
+  align-items: center;
+  padding: 46px 0 52px;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 760px;
-  padding: 96px 0 92px;
+  max-width: 640px;
 }
 
 .eyebrow {
@@ -139,17 +137,17 @@ a {
 }
 
 h1 {
-  font-size: clamp(3.5rem, 8vw, 7.6rem);
-  line-height: 0.9;
-  margin: 0 0 24px;
+  font-size: clamp(2.65rem, 5vw, 4.65rem);
+  line-height: 0.95;
+  margin: 0 0 20px;
   letter-spacing: 0;
 }
 
 .hero-copy {
   color: var(--soft);
-  font-size: clamp(1.08rem, 2.1vw, 1.32rem);
-  max-width: 700px;
-  margin: 0 0 34px;
+  font-size: clamp(1rem, 1.6vw, 1.18rem);
+  max-width: 620px;
+  margin: 0 0 28px;
 }
 
 .cta-row {
@@ -161,11 +159,11 @@ h1 {
 
 .primary-button,
 .secondary-button {
-  min-height: 48px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 18px;
   border-radius: 8px;
   font-weight: 760;
   text-decoration: none;
@@ -194,13 +192,13 @@ h1 {
 
 .note {
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.9rem;
   margin-top: 16px;
   max-width: 720px;
 }
 
 .section {
-  padding: 88px 0;
+  padding: 66px 0;
 }
 
 .section.alt {
@@ -211,7 +209,7 @@ h1 {
 
 .section h2,
 .legal-main h1 {
-  font-size: clamp(2.25rem, 4.8vw, 4.5rem);
+  font-size: clamp(2rem, 3.8vw, 3.3rem);
   line-height: 1;
   margin: 0 0 18px;
   letter-spacing: 0;
@@ -220,14 +218,35 @@ h1 {
 .section-lede,
 .legal-main > p {
   color: var(--muted);
-  font-size: 1.08rem;
-  max-width: 780px;
+  font-size: 1rem;
+  max-width: 720px;
 }
 
 .video-showcase {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(320px, 0.9fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.hero-media,
+.promo-frame {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero-media {
+  width: min(100%, 520px);
+  padding: 12px;
+  justify-self: end;
+}
+
+.promo-frame {
+  width: min(100%, 540px);
+  padding: 12px;
+  justify-self: end;
 }
 
 .promo-video {
@@ -236,21 +255,26 @@ h1 {
   aspect-ratio: 16 / 9;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: #000;
-  box-shadow: var(--shadow);
+  border-radius: 6px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
 }
 
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin-top: 36px;
+  margin-top: 28px;
+}
+
+.hero-media .promo-video {
+  max-height: 292px;
 }
 
 .feature {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 24px;
+  padding: 20px;
 }
 
 .feature h3 {
@@ -294,7 +318,7 @@ h1 {
 }
 
 .footer-inner {
-  width: min(1180px, calc(100% - 36px));
+  width: min(1060px, calc(100% - 36px));
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -315,7 +339,7 @@ h1 {
 }
 
 .legal-main {
-  padding: 78px 0;
+  padding: 64px 0;
 }
 
 .legal-section {
@@ -347,22 +371,31 @@ h1 {
   }
 
   .hero {
-    min-height: 720px;
+    min-height: auto;
   }
 
   .hero::before {
-    background:
-      linear-gradient(180deg, rgba(7, 11, 18, 0.7) 0%, rgba(7, 11, 18, 0.96) 70%),
-      linear-gradient(90deg, rgba(7, 11, 18, 0.92), rgba(7, 11, 18, 0.5));
+    background: linear-gradient(180deg, rgba(7, 11, 18, 0.04) 0%, rgba(7, 11, 18, 0.82) 100%);
   }
 
-  .hero-content {
-    padding: 70px 0 54px;
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 48px 0 50px;
   }
 
   .feature-grid,
-  .status-list {
+  .status-list,
+  .video-showcase {
     grid-template-columns: 1fr;
   }
-}
 
+  .promo-frame {
+    justify-self: stretch;
+  }
+
+  .hero-media {
+    justify-self: stretch;
+    width: 100%;
+  }
+}
