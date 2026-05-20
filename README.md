@@ -1,8 +1,8 @@
-# SwiftMentor
+# DevelopMentor
 
-Public App Store support site for SwiftMentor.
+Public App Store support site for DevelopMentor.
 
-This repository intentionally contains only public marketing, support, and privacy-policy pages. It does not contain app source code, internal planning documents, release artifacts, signing material, secrets, or private App Store Connect configuration.
+This repository intentionally contains only public marketing, support, privacy-policy, and App Store-facing documentation. It does not contain app source code, internal planning documents, release artifacts, signing material, secrets, license-generation tools, or private App Store Connect configuration.
 
 Pages:
 
@@ -10,8 +10,8 @@ Pages:
 - Support: `support.html`
 - Privacy Policy: `privacy.html`
 
-Apple marketing references used for this site:
+Public URLs:
 
-- App Store Marketing Resources and Identity Guidelines: https://developer.apple.com/app-store/marketing/guidelines/
-- TestFlight: https://developer.apple.com/testflight/
-
+- Website: https://noktirnal42.github.io/DevelopMentor-AppStore/
+- Support: https://noktirnal42.github.io/DevelopMentor-AppStore/support.html
+- Privacy: https://noktirnal42.github.io/DevelopMentor-AppStore/privacy.html

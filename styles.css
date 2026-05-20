@@ -259,6 +259,19 @@ h1 {
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.36);
 }
 
+.app-icon-showcase {
+  display: grid;
+  place-items: center;
+  padding: 34px;
+}
+
+.app-icon-showcase img {
+  width: min(100%, 292px);
+  aspect-ratio: 1;
+  border-radius: 30px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
+}
+
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
